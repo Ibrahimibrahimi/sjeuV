@@ -1,22 +1,22 @@
-## 2. Template Syntax & Basic Concepts
+## 2. Template Syntax & Basic Concepts 
 ### 2.1 Template Interpolation
-- Text interpolation with `{{ }}`
-- HTML interpolation with `v-html`
-- Attribute binding with `v-bind`
-- Dynamic attributes and shorthand `:` syntax
-- Expression limitations and JavaScript restrictions
+- Text interpolation with `{{ }}` [COMPLETED]
+- HTML interpolation with `v-html` [COMPLETED]
+- Attribute binding with `v-bind` 
+- Dynamic attributes and shorthand `:` syntax [COMPLETED]
+- Expression limitations and JavaScript restrictions 
 
 ### 2.2 Directives Fundamentals
 - What are directives?
-- `v-if`, `v-else-if`, `v-else` - Conditional rendering
-- `v-show` vs `v-if` - When to use each
-- `v-for` - List rendering
-  - Rendering arrays and objects
+- `v-if`, `v-else-if`, `v-else` - Conditional rendering [COMPLETED]
+- `v-show` vs `v-if` - When to use each [COMPLETED]
+- `v-for` - List rendering [COMPLETED]
+  - Rendering arrays and objects 
   - Keys in lists (importance and best practices)
   - Index usage in loops
 
 ### 2.3 Event Handling
-- `v-on` directive and `@` shorthand
+- `v-on` directive and `@` shorthand [COMPLETED]
 - Event modifiers (`.prevent`, `.stop`, `.self`, `.once`, `.capture`)
 - Key modifiers (`.enter`, `.tab`, `.esc`, `.space`)
 - Custom event handling patterns
