@@ -1,3 +1,7 @@
 1. use its online link :
     - not professionnal but working
     - no .vue files and harder to organize
+2. npm install -g @vue/cli
+3. vue create my-vue-app
+4. cd my-vue-app
+5. npm run serve
