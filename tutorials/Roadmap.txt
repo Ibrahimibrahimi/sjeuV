@@ -1,0 +1,786 @@
+## 2. Template Syntax & Basic Concepts
+### 2.1 Template Interpolation
+- Text interpolation with `{{ }}`
+- HTML interpolation with `v-html`
+- Attribute binding with `v-bind`
+- Dynamic attributes and shorthand `:` syntax
+- Expression limitations and JavaScript restrictions
+
+### 2.2 Directives Fundamentals
+- What are directives?
+- `v-if`, `v-else-if`, `v-else` - Conditional rendering
+- `v-show` vs `v-if` - When to use each
+- `v-for` - List rendering
+  - Rendering arrays and objects
+  - Keys in lists (importance and best practices)
+  - Index usage in loops
+
+### 2.3 Event Handling
+- `v-on` directive and `@` shorthand
+- Event modifiers (`.prevent`, `.stop`, `.self`, `.once`, `.capture`)
+- Key modifiers (`.enter`, `.tab`, `.esc`, `.space`)
+- Custom event handling patterns
+- Event propagation and bubbling
+
+### 2.4 Form Input Binding
+- `v-model` directive basics
+- Two-way data binding
+- Modifiers: `.lazy`, `.number`, `.trim`
+- Checkbox binding
+- Radio button binding
+- Select dropdown binding
+- Handling file inputs
+
+---
+
+## 3. Reactive Data & State Management
+### 3.1 Reactive Data Declaration
+- `ref()` - Creating reactive references
+- `reactive()` - Creating reactive objects
+- Difference between `ref` and `reactive`
+- Accessing reactive data in templates vs script
+- `.value` property in refs
+- When to use `ref` vs `reactive`
+
+### 3.2 Computed Properties
+- Creating computed properties with `computed()`
+- Getter and setter in computed properties
+- Performance benefits of computed properties
+- Computed vs methods - key differences
+- Computed property caching mechanism
+- Watch vs computed - when to use each
+
+### 3.3 Watchers
+- `watch()` function syntax
+- Watching single and multiple sources
+- Deep watchers and deep cloning
+- `watchEffect()` - automatic dependency tracking
+- Cleanup functions in watchers
+- Watcher options (immediate, flush, etc.)
+
+### 3.4 Lifecycle Hooks
+- Component lifecycle overview
+- `onMounted()` - After component mounts
+- `onUpdated()` - After component updates
+- `onUnmounted()` - Before component unmounts
+- `onBeforeMount()` - Before mounting
+- `onBeforeUpdate()` - Before update
+- `onBeforeUnmount()` - Before unmount
+- `onErrorCaptured()` - Error handling
+- Common use cases for each hook
+
+---
+
+## 4. Components & Component Communication
+### 4.1 Single File Components (SFC)
+- Structure of `.vue` files
+- `<template>`, `<script>`, `<style>` sections
+- Component naming conventions
+- Scoped styles and CSS modules
+- Pre-processor support (TypeScript, SCSS, etc.)
+
+### 4.2 Component Props
+- Defining props with `defineProps()`
+- Prop types and validation
+- Required vs optional props
+- Default values
+- Boolean shorthand
+- Prop drilling problems and solutions
+- Type hints in TypeScript
+
+### 4.3 Component Emits
+- Emitting custom events with `defineEmits()`
+- Emit validation
+- Event payloads and data passing
+- Parent-child communication patterns
+- Two-way binding with `v-model`
+- Custom component v-model
+
+### 4.4 Slots
+- Named slots
+- Scoped slots
+- Slot fallback content
+- Dynamic slot names
+- Slot props and binding
+- Slot patterns and use cases
+
+### 4.5 Component Composition Patterns
+- Container vs Presentational components
+- Composition patterns in Vue 3
+- Sharing stateful logic
+- Component composition best practices
+
+---
+
+## 5. Composition API Deep Dive
+### 5.1 Composition API Basics
+- What is the Composition API?
+- `<script setup>` syntax
+- Advantages over Options API
+- `setup()` function
+- Return values and template access
+
+### 5.2 Composables
+- What are composables?
+- Creating custom composables
+- Reusing composition logic
+- Popular composable patterns
+- `useRouter()`, `useRoute()` examples
+- Custom hook patterns
+- Composable naming conventions
+
+### 5.3 Provide & Inject
+- Providing values with `provide()`
+- Injecting values with `inject()`
+- Reactive provide/inject patterns
+- Symbol keys for type safety
+- Avoiding prop drilling with provide/inject
+- When to use provide/inject vs props
+
+### 5.4 Context API
+- Current instance with `getCurrentInstance()`
+- Accessing component context
+- Current component instance usage
+
+---
+
+## 6. Styling & CSS
+### 6.1 Component Styling
+- Inline styles with `:style` binding
+- Class binding with `:class`
+- Conditional classes
+- Object and array syntax for classes
+- Scoped styles in SFC (`<style scoped>`)
+
+### 6.2 CSS Modules
+- Using CSS Modules in Vue
+- Binding CSS Module classes
+- CSS Module benefits and use cases
+
+### 6.3 CSS Preprocessors
+- Using SCSS/SASS in Vue
+- Using Less in Vue
+- Variables and mixins
+- Preprocessor in components
+
+### 6.4 Tailwind CSS Integration
+- Setting up Tailwind with Vue
+- Utility-first CSS approach
+- Tailwind with component libraries
+
+---
+
+## 7. Routing & Navigation
+### 7.1 Vue Router Installation & Setup
+- Installing Vue Router
+- Creating router instance
+- Route configuration
+- Router mounting
+
+### 7.2 Routes & Navigation
+- Defining routes
+- Dynamic routes and segments
+- Route parameters and query strings
+- Named routes
+- Programmatic navigation with `router.push()`
+- Navigation links with `<RouterLink>`
+
+### 7.3 Nested Routes
+- Child routes
+- Router view nesting
+- Layout patterns with nested routes
+- Common routing architectures
+
+### 7.4 Route Guards
+- `beforeEach` global guard
+- `beforeEnter` route-specific guard
+- `beforeRouteEnter`, `beforeRouteUpdate`, `beforeRouteLeave` component guards
+- Authentication and authorization checks
+- Meta fields for route data
+- Preventing unauthorized navigation
+
+### 7.5 Advanced Routing
+- Lazy loading routes with `import()`
+- Code splitting strategies
+- Route transitions
+- Hash vs history mode
+- Scroll behavior
+- Handling 404 routes
+
+---
+
+## 8. State Management with Pinia
+### 8.1 Pinia Basics
+- What is Pinia and why use it?
+- Pinia vs Vuex
+- Installing and setting up Pinia
+- Creating your first store
+
+### 8.2 Store Structure
+- State definition
+- Getters in stores
+- Actions in stores
+- Mutations vs Actions
+- Store naming conventions
+
+### 8.3 Store Usage
+- Using stores in components
+- Destructuring store properties
+- Reactive store updates
+- Store composition
+
+### 8.4 Advanced Pinia
+- Modules and large applications
+- Plugins in Pinia
+- Persisting state
+- Devtools integration
+- Testing stores
+
+---
+
+## 9. API Communication & HTTP Requests
+### 9.1 HTTP Client Setup
+- Using fetch API
+- Installing and using Axios
+- Creating HTTP client instances
+- Base URLs and interceptors
+
+### 9.2 Making Requests
+- GET requests
+- POST requests
+- PUT/PATCH requests
+- DELETE requests
+- Request headers
+- Request and response interceptors
+
+### 9.3 Handling Responses
+- Success response handling
+- Error handling and status codes
+- Loading states
+- Error messages and user feedback
+- Timeout handling
+
+### 9.4 API Integration Patterns
+- Composable for API calls
+- Loading, error, and data states
+- Retry logic
+- Caching strategies
+- Request cancellation
+
+---
+
+## 10. Form Handling & Validation
+### 10.1 Form Basics
+- Form structure and accessibility
+- Form state management
+- Handling form submission
+- Form reset patterns
+
+### 10.2 Form Validation
+- Client-side validation
+- Custom validation rules
+- VeeValidate library integration
+- Zod or Yup for schema validation
+- Real-time validation feedback
+- Error message display
+
+### 10.3 Advanced Form Patterns
+- Dynamic form fields
+- Conditional field visibility
+- Multi-step forms
+- File upload handling
+- Form auto-save
+
+---
+
+## 11. Transitions & Animations
+### 11.1 Vue Transitions
+- `<Transition>` component
+- CSS transition and animation integration
+- Transition classes
+- JavaScript hooks in transitions
+- Conditional transitions
+
+### 11.2 Transition Group
+- `<TransitionGroup>` for list animations
+- Animating list additions/removals
+- Reordering animations
+- Key usage in transition groups
+
+### 11.3 Animation Best Practices
+- Performance considerations
+- GPU acceleration
+- Accessibility in animations
+- Common animation patterns
+
+---
+
+## 12. Error Handling & Debugging
+### 12.1 Error Handling
+- Try-catch blocks
+- Error boundaries with `onErrorCaptured`
+- Global error handler
+- Async error handling
+
+### 12.2 Vue DevTools
+- Installing Vue DevTools
+- Inspecting components
+- Tracking reactive changes
+- Event tracking
+- Timeline inspection
+- Profiling performance
+
+### 12.3 Debugging Techniques
+- Console logging strategies
+- Browser DevTools integration
+- Source maps
+- Breakpoints
+- Network debugging
+
+---
+
+## 13. Testing Vue Components
+### 13.1 Testing Setup
+- Jest or Vitest configuration
+- Testing library setup
+- Test environment
+
+### 13.2 Unit Testing
+- Testing component rendering
+- Testing props and emits
+- Testing computed properties
+- Testing watchers
+- Testing lifecycle hooks
+- Mocking dependencies
+
+### 13.3 Integration Testing
+- Testing multiple components together
+- Testing component communication
+- Testing routes
+- Testing stores
+
+### 13.4 E2E Testing
+- Cypress setup and basics
+- Playwright setup and basics
+- Writing E2E tests
+- Testing user interactions
+- Testing complex workflows
+
+---
+
+## 14. Performance Optimization
+### 14.1 Bundle Size Optimization
+- Code splitting strategies
+- Tree shaking
+- Lazy loading components
+- Dynamic imports
+- Analyzing bundle size
+
+### 14.2 Runtime Performance
+- Avoiding unnecessary re-renders
+- Computed properties caching
+- `v-show` vs `v-if`
+- List key optimization
+- Profiling with Vue DevTools
+
+### 14.3 Image & Asset Optimization
+- Image formats and compression
+- Lazy loading images
+- WebP format support
+- SVG optimization
+
+### 14.4 Server-Side Rendering (SSR)
+- What is SSR and why use it?
+- Nuxt.js for SSR
+- Hydration process
+- SEO benefits
+
+---
+
+## 15. TypeScript Integration
+### 15.1 TypeScript Setup
+- Adding TypeScript to Vue project
+- TypeScript configuration
+- Type definitions for Vue
+
+### 15.2 Component TypeScript
+- Typed props with `PropType<T>`
+- Typed emits
+- Script setup with TypeScript
+- Generic components
+
+### 15.3 Type Safety
+- Typing refs
+- Typing computed properties
+- Typing watchers
+- Typing stores
+- Typing API responses
+
+---
+
+## 16. Advanced Component Patterns
+### 16.1 Render Functions
+- Creating components with render functions
+- JSX in Vue
+- Conditional rendering with render
+- Dynamic component rendering
+
+### 16.2 Async Components
+- `defineAsyncComponent()`
+- Lazy loading components
+- Loading and error states
+- Suspense component
+
+### 16.3 Dynamic Components
+- `<component :is="..." />` binding
+- Dynamic component registration
+- Keep-alive for component state
+
+---
+
+## 17. Plugin Development
+### 17.1 Plugin Basics
+- What are Vue plugins?
+- Creating custom plugins
+- Plugin installation patterns
+- Plugin configuration
+
+### 17.2 Common Plugin Types
+- Global component plugins
+- Directive plugins
+- Utility/helper plugins
+- UI library plugins
+
+---
+
+## 18. Directives (Custom)
+### 18.1 Custom Directive Basics
+- Creating custom directives
+- Directive hooks (created, mounted, updated, unmounted)
+- Directive arguments and modifiers
+- v-focus, v-click-outside patterns
+
+### 18.2 Reusable Directives
+- Building useful custom directives
+- Directive composition
+- Testing custom directives
+
+---
+
+## 19. Build Tools & Configuration
+### 19.1 Vite Configuration
+- Vite as modern build tool
+- Configuration file (vite.config.js)
+- Environment variables
+- Build optimization
+
+### 19.2 Module Resolution
+- Path aliases
+- Module resolution strategies
+- Import optimization
+
+### 19.3 Build & Deployment
+- Production build process
+- Build optimization
+- Environment-specific builds
+- Deployment preparation
+
+---
+
+## 20. Package Management & Dependencies
+### 20.1 npm Ecosystem
+- Installing packages
+- Package versioning
+- package.json understanding
+- Lock files (package-lock.json, yarn.lock, pnpm-lock.yaml)
+
+### 20.2 Dependency Management
+- Managing dependencies
+- Updating packages safely
+- Breaking changes handling
+- Security audits
+
+---
+
+## 21. Component Libraries & UI Frameworks
+### 21.1 Popular Vue Component Libraries
+- Vue Material
+- Element Plus
+- PrimeVue
+- Ant Design Vue
+- shadcn/vue
+
+### 21.2 Integrating Libraries
+- Installation and setup
+- Using pre-built components
+- Customization and theming
+- Tree-shaking unused components
+
+---
+
+## 22. Popular Composables & Libraries
+### 22.1 VueUse Library
+- Using @vueuse/core utilities
+- useLocalStorage, useSessionStorage
+- useFetch for API calls
+- useMousePressed, useWindowSize
+- Other powerful composables
+
+### 22.2 Other Essential Libraries
+- date-fns or Day.js for date handling
+- lodash-es for utility functions
+- clsx for class name management
+
+---
+
+## 23. Internationalization (i18n)
+### 23.1 Vue I18n Setup
+- Installing vue-i18n
+- Configuration
+- Locale management
+
+### 23.2 Translation Implementation
+- Setting up translations
+- Language switching
+- Pluralization
+- Date and number formatting
+- Lazy loading translations
+
+---
+
+## 24. Progressive Web App (PWA)
+### 24.1 PWA Concepts
+- What is a PWA?
+- Service workers
+- Web app manifest
+- Installation prompts
+
+### 24.2 PWA Implementation
+- Service worker registration
+- Caching strategies
+- Offline functionality
+- PWA Workbox integration
+
+---
+
+## 25. Real-time Communication
+### 25.1 WebSocket Integration
+- WebSocket basics
+- Connecting to WebSocket server
+- Sending and receiving messages
+- Reconnection handling
+
+### 25.2 Real-time Libraries
+- Socket.IO setup and usage
+- Event-driven communication
+- Real-time store updates
+
+---
+
+## 26. Security Best Practices
+### 26.1 XSS Prevention
+- Vue's automatic escaping
+- v-html safe usage
+- Sanitizing user input
+- DOMPurify integration
+
+### 26.2 CSRF Protection
+- CSRF tokens
+- Server-side validation
+- Safe API requests
+
+### 26.3 Security Patterns
+- Secure authentication
+- Token storage
+- Secure headers
+- Content Security Policy
+
+---
+
+## 27. SEO & Meta Management
+### 27.1 Meta Tags Management
+- vue-meta or useHead()
+- Dynamic meta tags
+- OG tags for social sharing
+- JSON-LD for structured data
+
+### 27.2 SEO Best Practices
+- URL structure
+- Heading hierarchy
+- Performance metrics (Core Web Vitals)
+- Sitemap generation
+
+---
+
+## 28. Monitoring & Analytics
+### 28.1 Error Tracking
+- Sentry integration
+- Error boundary implementation
+- Error reporting
+
+### 28.2 Analytics
+- Google Analytics setup
+- Event tracking
+- User behavior analysis
+- Custom events
+
+### 28.3 Performance Monitoring
+- Web Vitals tracking
+- Performance metrics
+- Identifying bottlenecks
+- Lighthouse integration
+
+---
+
+## 29. Full-Stack Application Architecture
+### 29.1 Project Structure
+- Organizing large applications
+- Folder structure best practices
+- Feature-based vs layer-based organization
+- Shared utilities and constants
+
+### 29.2 Code Organization
+- Module organization
+- Feature modules
+- Shared modules
+- Core modules
+
+### 29.3 Design Patterns
+- SOLID principles in Vue
+- Repository pattern
+- Dependency injection
+- Observer pattern
+
+---
+
+## 30. Nuxt.js & Meta-Frameworks
+### 30.1 Nuxt.js Basics
+- What is Nuxt.js?
+- Project structure
+- File-based routing
+- Automatic code splitting
+
+### 30.2 Nuxt Features
+- Server-side rendering (SSR)
+- Static site generation (SSG)
+- API routes
+- Middleware
+- Plugins and modules
+
+### 30.3 Nuxt Best Practices
+- Performance optimization
+- Data fetching patterns
+- Error handling
+- Deployment strategies
+
+---
+
+## 31. Extra: Ecosystem & Community
+### 31.1 Learning Resources
+- Official Vue.js documentation
+- Vue School courses
+- Scrimba Vue courses
+- YouTube channels and tutorials
+- Community forums and Discord
+
+### 31.2 Tools & Productivity
+- VS Code extensions
+- IDE setup optimization
+- Git workflows
+- CI/CD integration
+
+### 31.3 Contributing & Open Source
+- Contributing to Vue.js
+- Creating and publishing packages
+- GitHub workflows
+- Community involvement
+
+---
+
+## Learning Path Recommendations
+
+### Phase 1: Foundations (Weeks 1-4)
+1. Vue.js Fundamentals & Setup
+2. Template Syntax & Basic Concepts
+3. Reactive Data & State Management
+4. Components & Component Communication
+
+### Phase 2: Intermediate (Weeks 5-10)
+5. Composition API Deep Dive
+6. Routing & Navigation
+7. State Management with Pinia
+8. API Communication & HTTP Requests
+9. Styling & CSS
+
+### Phase 3: Advanced (Weeks 11-16)
+10. Form Handling & Validation
+11. Transitions & Animations
+12. Testing Vue Components
+13. Performance Optimization
+14. TypeScript Integration
+
+### Phase 4: Expert (Weeks 17+)
+15. Advanced Component Patterns
+16. Security Best Practices
+17. Full-Stack Application Architecture
+18. Nuxt.js & Meta-Frameworks
+19. Monitoring & Analytics
+20. Ecosystem & Community Contribution
+
+---
+
+## Pro Tips for Mastery 💡
+
+1. **Practice by Building**: Build actual projects, not just tutorials
+2. **Read Source Code**: Study Vue.js source code and popular libraries
+3. **Contribute**: Contribute to open-source Vue projects
+4. **Stay Updated**: Follow Vue.js releases and RFC discussions
+5. **Join Community**: Engage with Vue community on Discord/Reddit
+6. **Deep Dive**: Master one concept at a time before moving forward
+7. **Code Reviews**: Get feedback on your code from experienced developers
+8. **Build Projects**: Create progressively complex projects
+9. **Refactor**: Revisit old code and refactor with new knowledge
+10. **Teach Others**: Explain concepts to reinforce your understanding
+
+---
+
+## Project Ideas by Level
+
+### Beginner
+- Todo application
+- Weather app
+- Personal portfolio
+- Blog with static content
+- Movie search app
+
+### Intermediate
+- E-commerce product listing
+- Social media feed
+- Real-time chat application
+- Task management system
+- Notes application with local storage
+
+### Advanced
+- Full-stack application with backend
+- Real-time collaboration tool
+- Progressive Web App
+- Multi-language platform
+- Admin dashboard with analytics
+
+---
+
+## Resources & Links
+
+- **Official**: https://vuejs.org
+- **Docs**: https://vuejs.org/guide/
+- **Router**: https://router.vuejs.org
+- **Pinia**: https://pinia.vuejs.org
+- **Nuxt**: https://nuxt.com
+- **Vite**: https://vitejs.dev
+- **VueUse**: https://vueuse.org
+
+---
+
+**Happy Learning! 🎉**
+
+*Remember: Mastery comes from consistent practice, experimentation, and building real projects. Start with the fundamentals and gradually progress through the roadmap.*
